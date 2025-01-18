@@ -1,0 +1,556 @@
+:root {
+    --color-dark-gray: #191919;
+    --color-bright-orange: #ff792e;
+    --color-yellow-orange: #ffab3b;
+    --color-light-yellow: #fff23e;
+    --color-white: #ffffff;
+    --color-yellow: #ffd12f;
+}
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+
+
+
+
+
+body {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+.name p {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 1px var(--color-yellow-orange);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.name p:hover {
+    color: var(--color-light-yellow);
+    text-shadow: 2px 1px var(--color-bright-orange);
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+.name p:visited {
+    color: var(--color-dark-gray);
+    text-shadow: 2px 1px var(--color-bright-orange);
+}
+
+
+
+
+
+
+
+
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+.search-container {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+.search-container i {
+    background-color: black;
+    color: #FFAB3B;
+    border: 1.5px solid;
+    margin-right: .1%;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+.search-icon {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff23e;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.search-container input {
+    margin: 0%;
+    padding: 4px;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+.search {
+    padding: 10px 35px 10px 15px;
+    border: 1px solid var(--color-bright-orange);
+    border-radius: 5px;
+    width: 300px;
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+
+
+
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+#datetime {
+    font-size: 14px;
+    color: #555;
+    margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+header::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #f7c600;
+}
+
+
+
+
+
+
+
+
+.main-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+.sidebar {
+    width: 320px;
+    background-color: #191919;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.3),
+        0 50px 70px rgba(0, 0, 0, 0.7),
+        0 40px 60px rgba(0, 0, 0, 0.7),
+        0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+.sidebar:hover {
+    box-shadow:
+    8px 0 6px rgba(0, 0, 0, 0.2),
+    8px 20px 40px rgba(0, 0, 0, 0.7),
+    8px 0 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+.user-info p {
+    color: var(--color-light-yellow);
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+
+
+
+
+
+.sidebar-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+.sidebar-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff23e;
+    color: #191919;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.sidebar-btn:hover {
+    background-color: #ffd700;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+.logout-btn {
+    text-decoration: none;
+    color: #f7c600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    top: -10px;
+}
+
+
+
+
+
+
+
+
+.logout-btn:hover {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+.content h2 {
+    font-size: 35px;
+    margin-bottom: 3px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 5px;
+    font-family: 'Nunito', sans-serif;
+    color: #b55a27;
+}
+
+
+
+
+
+
+
+
+.task-table {
+    width: 95%;
+    max-width: 1100px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 10px auto;
+    border: 2px solid black;
+    border-radius: 30px;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+
+
+
+
+
+
+
+.task-table th,
+.task-table td {
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+.task-table tbody tr:nth-child(1) td,
+.task-table tbody tr:nth-child(3) td,
+.task-table tbody tr:nth-child(5) td {
+    background-color: #ffab3b;
+}
+
+
+
+
+
+
+
+
+.task-table th:first-child,
+.task-table td:first-child {
+    border-left: none;
+}
+
+
+
+
+
+
+
+
+.task-table th:last-child,
+.task-table td:last-child {
+    border-right: none;
+}
+.icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+}
+.icon-container i {
+    font-size: 30px;
+    color: var(--color-dark-gray);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.icon-container i:hover {
+    transform: scale(1.2);
+}
+.icon-container i {
+    font-size: 30px;
+    color: var(--color-dark-gray);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.icon-container i:hover {
+    transform: scale(1.2);
+}
+
+
+.complete-icon {
+    color: var(--color-yellow);
+    font-size: 30px;
+}
+
+
+.complete-icon:hover {
+    color: var(--color-bright-orange);
+    transform: scale(1.2);
+}

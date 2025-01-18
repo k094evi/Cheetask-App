@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheetask: Login</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f60434a0f6.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="LOGO.png">
+
+
+</head>
+<body>
+    <div class="login-container">
+        <img src="LOGO.png" alt="Cheetah Logo" class="logo">
+        <h2>Sign in</h2>
+        <p>to continue to your account.</p>
+        <form action="Login.php" method="post">
+            <div class="input-group">
+                <i class="fa-solid fa-user fa-sm"></i>
+                <input type="text" placeholder="Username" name="username" required>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-lock fa-sm"></i>
+                <input type="password" placeholder="Password" name="password" required>
+            </div>
+            <button href= "Dashboard.html" type="submit" class="continue-btn">Continue</button>
+        </form>        
+        <p class="signup-link">Don’t have an account? <a href="SignUp.html">Sign up</a></p>
+    </div>  
+  </body>
+  </html>

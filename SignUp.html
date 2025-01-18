@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheeTask: Sign up</title>
+    <link rel="stylesheet" href="SignUp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f60434a0f6.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="LOGO.png">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+                <img src="LOGO.png" alt="Cheetah Logo">
+            </div>
+            <h2>Sign up to continue</h2>
+            <form class="signup-form" action="SignUp.php" method="post">
+                <div class="input-group">
+                    <label for="username">
+                        <span class="icon"><i class="fa-solid fa-user fa-sm" style="color: rgba(25, 25, 25, 0.65);"></i></span>
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="email">
+                        <span class="icon"><i class="fa-solid fa-envelope fa-sm" style="color: rgba(25, 25, 25, 0.65);"></i></span>
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="password">
+                        <span class="icon"><i class="fa-solid fa-lock fa-sm" style="color: rgba(25, 25, 25, 0.65);"></i></span>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </label>
+                </div>
+                <input type="submit" class="signup-button" value="Sign Up">
+            </form>
+            <p>Already have an account? <a href="Login.html">Log in</a></p>
+        </div>
+        <div class="right">
+            <h1>Code. Debug. Deploy.<br>Keep Track of Everything.</h1>
+        </div>
+    </div>
+</body>
+</html>

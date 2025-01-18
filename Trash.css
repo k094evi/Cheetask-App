@@ -1,0 +1,401 @@
+:root {
+    --color-dark-gray: #191919;
+    --color-bright-orange: #ff792e;
+    --color-yellow-orange: #ffab3b;
+    --color-light-yellow: #fff23e;
+    --color-white: #ffffff;
+    --color-yellow: #ffd12f;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+body {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.name img {
+    width: 70px;
+    height: auto;
+}
+
+
+.name p {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 1px var(--color-yellow-orange);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.name p:hover {
+    color: var(--color-light-yellow);
+    text-shadow: 2px 1px var(--color-bright-orange);
+    transform: scale(1.1);
+}
+
+
+.name p:visited {
+    color: var(--color-dark-gray);
+    text-shadow: 2px 1px var(--color-bright-orange);
+}
+
+
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.search-container {
+    position: relative;
+}
+
+
+.search-container i {
+    background-color: black;
+    color: #FFAB3B;
+    border: 1.5px solid;
+    margin-right: .1%;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+
+.search-icon {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff23e;
+    cursor: pointer;
+}
+
+
+.search-container input {
+    margin: 0%;
+    padding: 4px;
+    font-size: 15px;
+}
+
+
+.search {
+    padding: 10px 35px 10px 15px;
+    border: 1px solid var(--color-bright-orange);
+    border-radius: 5px;
+    width: 300px;
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#datetime {
+    font-size: 14px;
+    color: #555;
+    margin-right: 30px;
+}
+
+
+header::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: var(--color-yellow);
+}
+
+
+.main-container {
+    display: flex;
+    flex: 1;
+    height: auto;
+    min-height: calc(100vh - 50px); /* Subtract the header height */
+    overflow-y: auto; /* Allow scrolling */
+}
+
+
+.task-section {
+    flex: 1;
+    margin-left: 20px; /* Example spacing */
+    overflow-y: auto; /* Ensure scrollability for overflowing content */
+    padding: 20px;
+}
+
+
+.main-container a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.main-container a:hover {
+    transform: scale(1.1);
+}
+
+
+.sidebar {
+    width: 320px;
+    background-color: #191919;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.3),  
+        0 50px 70px rgba(0, 0, 0, 0.7),  
+        0 40px 60px rgba(0, 0, 0, 0.7),  
+        0 5px 15px rgba(0, 0, 0, 0.2);    
+}
+
+
+.sidebar:hover {
+    box-shadow:
+        8px 0 6px rgba(0, 0, 0, 0.2),
+        8px 20px 40px rgba(0, 0, 0, 0.7),
+        8px 0 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.user-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.user-info p {
+    color: var(--color-light-yellow);
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.sidebar-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+
+.sidebar-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color-light-yellow);
+    color: #191919;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.sidebar-btn:hover {
+    background-color: #ffd700;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+.sidebar a {
+    text-decoration: none;
+}
+
+
+.logout-btn {
+    text-decoration: none;
+    color: #f7c600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+    top: -10px;
+    margin-bottom: 40px;
+}
+
+
+.task-section {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+.task-section h2 {
+    color: #b55a27;
+    margin-left: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.task-section p {
+    margin-bottom: 20px;
+}
+
+
+.return {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    margin-left: 50px;
+}
+
+
+.return:hover {
+    text-decoration: none;
+    color: #ff792e;
+}
+
+
+.task-list {
+    border: 2px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 1000px; /* Decreased the max-width to make it smaller */
+    margin: 0px 0px 20px 50px;
+    padding: 0;
+}
+
+
+
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border-bottom: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.refresh-icon {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 1000px;
+    width: 25px;
+    height: 30px;
+}
+
+
+.trash-icon {
+    width: 20px;
+    height: 20px;
+}
+/* Adjust the spacing and styling of the trash button */
+.empty-trash {
+    background-color: #000;
+    color: #ffc107;
+    border: none;
+    padding: 15px 30px; /* Increased padding for more space */
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-left: 950px;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-bottom: 40px; /* Added more space below */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased space between icon and text */
+}
+
+
+.empty-trash:hover {
+    background-color: #333;
+}
+
+
+.empty-trash i {
+    font-size: 20px;
+}
+
+
+.restore-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-left: 950px;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-bottom: 40px;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.restore-btn:hover {
+    background-color: #218838;
+}
+
+
+.restore-btn i {
+    font-size: 20px;
+}

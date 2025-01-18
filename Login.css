@@ -1,0 +1,110 @@
+:root {
+    --color-dark-gray: #191919;
+    --color-bright-orange: #ff792e;
+    --color-yellow-orange: #ffab3b;
+    --color-light-yellow: #fff23e;
+    --color-white: #ffffff;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--color-white);
+}
+
+
+.login-container {
+    text-align: center;
+    background: var(--color-white);
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+
+.login-container h2 {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+
+.login-container p {
+    color: var(--color-dark-gray);
+    font-size: 16px;
+    margin: 5px 0 20px;
+}
+
+
+.input-group {
+    position: relative;
+    margin: 15px 0;
+    width: 100%;
+}
+
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: rgba(25, 25, 25, 0.65);
+}
+
+
+.input-group input {
+    width: 80%;
+    padding: 10px 40px; /* Space for icon */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+
+.continue-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--color-white);
+    background: var(--color-dark-gray);
+    border: 2px solid var(--color-bright-orange);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;
+
+
+}
+
+
+.continue-btn:hover {
+    background: var(--color-light-yellow);
+    color: var(--color-dark-gray);
+    transform: scale(1.1);
+}
+
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+.signup-link a {
+    text-decoration: none;
+    color: var(--color-bright-orange);
+}

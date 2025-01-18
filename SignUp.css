@@ -1,0 +1,163 @@
+:root {
+    --color-dark-gray: #191919;
+    --color-bright-orange: #ff792e;
+    --color-yellow-orange: #ffab3b;
+    --color-light-yellow: #fff23e;
+    --color-white: #ffffff;
+    --color-yellow: #ffd12f;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--color-white);
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+.left, .right {
+    flex: 1;
+    padding: 40px;
+}
+
+
+.left {
+    background-color: var(--color-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.signup-form {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+
+.input-group input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 35px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+
+.signup-button {
+    background-color: var(--color-dark-gray);
+    color: var(--color-light-yellow);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 3px 3px var(--color-bright-orange);
+}
+
+
+.signup-button:hover {
+    background-color: var(--color-light-yellow);
+    color: var(--color-dark-gray);
+}
+.left {
+    margin-top: 90px;
+}
+
+
+.left h2 {
+    word-spacing: 5px;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+
+.left p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+.left a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.right {
+    background-color: var(--color-dark-gray);
+    color: var(--color-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+
+.right h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-top: 170px;
+    word-spacing: 5px;
+    max-width: 1100px;
+}
+
